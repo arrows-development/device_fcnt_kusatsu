@@ -101,6 +101,9 @@ ro.vendor.pq.mtk_blulight_def_support=0
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
