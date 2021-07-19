@@ -88,6 +88,9 @@ ro.vendor.mtk_widevine_drm_l1_support=1
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
+# LMK
+ro.lmk.filecache_min_kb=153600
+
 # Media
 debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
