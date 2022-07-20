@@ -8,6 +8,7 @@ ro.vendor.mtk_hifiaudio_support=1
 vendor.audio.powerhal.power.hi_res=true
 
 # Bluetooth
+bluetooth.hardware.power.operating_voltage_mv=3300
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.bas.client.enabled=true
