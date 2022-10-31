@@ -251,6 +251,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
+PRODUCT_PACKAGES += \
+    LineageApertureOverlayManaus
+
 # Power-off Alarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
