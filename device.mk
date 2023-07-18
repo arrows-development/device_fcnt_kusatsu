@@ -4,8 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/motorola/manaus
+
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -35,7 +41,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(DEVICE_PATH)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/manaus/manaus-vendor.mk)
