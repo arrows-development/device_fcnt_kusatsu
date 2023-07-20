@@ -26,6 +26,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('1.1', '1.2')
         .regex_replace('@1.0', '@1.2')
         .regex_replace('default9', 'default'),
+    'vendor/lib64/hw/mt6879/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
+        .replace_needed('libutils.so', 'libutils-v32.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
