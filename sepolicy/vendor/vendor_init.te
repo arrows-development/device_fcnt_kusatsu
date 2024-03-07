@@ -13,3 +13,4 @@ set_prop(vendor_init, vendor_sku_prop)
 
 # Fingerprint
 allow vendor_init sysfs_fingerprint:file setattr;
+rw_dir_file(vendor_init, sysfs_leds)
