@@ -13,3 +13,7 @@ allow hal_power_default sysfs_cm_mgr:file rw_file_perms;
 
 # Sensors
 rw_dir_file(hal_power_default, sysfs_sensor)
+allow hal_power_default proc_cpufreq:dir r_dir_perms;
+allow hal_power_default proc_cpufreq:file rw_file_perms;
+allow hal_power_default sysfs_ged:file w_file_perms;
+r_dir_file(hal_power_default, sysfs_ged)
