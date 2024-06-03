@@ -89,6 +89,7 @@ ro.vendor.mtk_widevine_drm_l1_support=1
 ro.hardware.gatekeeper=trustonic
 
 # LMK
+ro.lmk.kill_heaviest_task=true
 ro.lmk.filecache_min_kb=153600
 
 # Media
