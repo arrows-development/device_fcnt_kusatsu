@@ -183,7 +183,9 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayManaus \
     SettingsOverlayManaus \
     SystemUIOverlayManaus \
-    Launcher3DeviceOverlay
+    Launcher3DeviceOverlay \
+    TetheringOverlayManaus \
+    WifiOverlayManaus
 
 # Power-off Alarm
 PRODUCT_PACKAGES += \
