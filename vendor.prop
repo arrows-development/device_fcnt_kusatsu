@@ -228,6 +228,7 @@ ro.vendor.sensors.prox_for_call=true
 debug.sf.auto_latch_unsignaled=1
 debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_hwc_vds=0
+debug.sf.enable_gl_backpressure=false
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.hwc.min.duration=6944444
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
