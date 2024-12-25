@@ -197,6 +197,9 @@ PRODUCT_PACKAGES += \
     TetheringOverlayManaus \
     WifiOverlayManaus
 
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Power-off Alarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
