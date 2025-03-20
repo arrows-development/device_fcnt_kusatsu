@@ -12,6 +12,7 @@ import /vendor/etc/init/hw/init.sensor_2_0.rc
 import /vendor/etc/init/hw/init.cgroup.rc
 import /vendor/etc/init/hw/init.mmi.rc
 import /vendor/etc/init/hw/init.mt6855.power.rc
+import /vendor/etc/init/hw/init.kusatsu.sku.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc

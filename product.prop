@@ -16,3 +16,5 @@ remote_provisioning.tee.rkp_only=1
 # Skia tracing
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
+
+import /product/product.${ro.boot.product.hardware.sku}.prop
