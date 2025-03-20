@@ -168,6 +168,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/felica/kddi/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     $(LOCAL_PATH)/configs/felica/kddi/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg
 
+# Felica (docomo)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/felica/docomo/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica-docomo/common.cfg \
+    $(LOCAL_PATH)/configs/felica/docomo/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica-docomo/mfm.cfg \
+    $(LOCAL_PATH)/configs/felica/docomo/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica-docomo/mfs.cfg
+
 # Fingerprint
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -268,7 +274,8 @@ PRODUCT_PACKAGES += \
     RegulatoryOverlayRA07507-101X \
     RegulatoryOverlayRA07507-102X \
     RegulatoryOverlayRA07507-105X \
-    RegulatoryOverlayFCG02
+    RegulatoryOverlayFCG02 \
+    RegulatoryOverlayF-52E
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
