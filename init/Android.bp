@@ -50,6 +50,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.kusatsu.sku.rc",
+    src: "init.kusatsu.sku.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.mt6855.usb.rc",
     src: "init.mt6855.usb.rc",
     relative_install_path: "init/hw",

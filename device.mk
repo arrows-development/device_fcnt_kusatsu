@@ -91,6 +91,7 @@ PRODUCT_PACKAGES += \
     init.connectivity.common.rc \
     init_connectivity.rc \
     init.insmod.sh \
+    init.kusatsu.sku.rc \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
@@ -346,6 +347,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SHIPPING_API_LEVEL := 33
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
+# SKU
+# Variant Properties
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,product.*.prop,$(DEVICE_PATH)/configs/properties/sku/,$(TARGET_COPY_OUT_PRODUCT))
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
