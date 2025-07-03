@@ -22,11 +22,12 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
-<<<<<<< HEAD
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
         .regex_replace('1.1', '1.2')
         .regex_replace('@1.0', '@1.2')
         .regex_replace('default9', 'default'),
+    ('vendor/bin/mnld', 'vendor/lib64/mt6879/libcam.utils.sensorprovider.so'): blob_fixup()
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     ('vendor/lib64/hw/mt6879/android.hardware.camera.provider@2.6-impl-mediatek.so', 'vendor/lib64/mt6879/libmtkcam_stdutils.so', 'vendor/lib64/hw/mt6879/vendor.mediatek.hardware.pq@2.15-impl.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
 
