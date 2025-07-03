@@ -131,6 +131,13 @@ VENDOR_SECURITY_PATCH := 2026-04-01
 # VINTF
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
+# SKU
+ODM_MANIFEST_SKUS += be de bn dn
+ODM_MANIFEST_BE_FILES := $(DEVICE_PATH)/sku/manifest_be.xml
+ODM_MANIFEST_DE_FILES := $(DEVICE_PATH)/sku/manifest_de.xml
+ODM_MANIFEST_BN_FILES := $(DEVICE_PATH)/sku/manifest_bn.xml
+ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
