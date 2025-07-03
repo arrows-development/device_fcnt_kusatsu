@@ -43,6 +43,10 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so')
+        .replace_needed('libutils.so','libutils-v32.so')
+        .replace_needed('libalsautils.so','libalsautils-v31.so'),
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
         .regex_replace('1.1', '1.2')
         .regex_replace('@1.0', '@1.2')
