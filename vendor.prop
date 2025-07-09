@@ -227,6 +227,7 @@ ro.vendor.sensors.prox_for_call=true
 # Surface Flinger
 debug.sf.enable_hwc_vds=0
 debug.sf.treat_170m_as_sRGB=1
+debug.sf.hwc.min.duration=6944444
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.set_idle_timer_ms=500
 ro.surface_flinger.set_touch_timer_ms=1000
