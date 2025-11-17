@@ -182,3 +182,14 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 vendor/firmware/aw882xx_acf.bin
 vendor/firmware/aw963xx_reg_0.bin
 vendor/firmware/aw963xx_reg_evt_0.bin
+
+# Bluetooth (Driver)
+vendor/lib64/libbluetooth_mtk.so
+vendor/lib64/libbt-vendor.so
+
+# Bluetooth (Firmware)
+vendor/etc/init/init.bt_drv.rc
+vendor/firmware/soc7_0_ram_bt_1_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1a_1_hdr.bin
+vendor/firmware/soc7_0_ram_bt_1b_1_hdr.bin
+vendor/firmware/BT_FW.cfg
