@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
     init.mmi.rc \
     init.modem.rc \
     init.recovery.mt6879.rc \
+    init.mt6879.usb.rc \
     init.mt6879.rc \
     init.mtkgki.rc \
     init.oem.hw.sh \
