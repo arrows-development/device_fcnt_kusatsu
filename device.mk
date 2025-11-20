@@ -265,6 +265,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/motorola \
     hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/libaedv \
     hardware/mediatek
 
 # Thermal
