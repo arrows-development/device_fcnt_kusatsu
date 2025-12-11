@@ -1289,6 +1289,9 @@ vendor/lib64/libsysenv.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
+# Tinyxml
+system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-v31.so;FIX_SONAME
+
 # Power
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
