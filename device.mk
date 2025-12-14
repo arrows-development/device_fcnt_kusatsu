@@ -182,7 +182,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworkOverlayManaus \
     SettingsOverlayManaus \
-    SystemUIOverlayManaus
+    SystemUIOverlayManaus \
+    Launcher3DeviceOverlay
 
 # Power-off Alarm
 PRODUCT_PACKAGES += \
