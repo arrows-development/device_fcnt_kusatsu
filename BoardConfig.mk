@@ -123,6 +123,7 @@ TARGET_BOARD_PLATFORM := mt6879
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/system.prop
 
 # Security patch level
 BOOT_SECURITY_PATCH := 2026-04-01

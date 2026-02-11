@@ -10,6 +10,7 @@ from extract_utils.fixups_blob import (
 )
 
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -39,6 +40,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.mediatek.hardware.apuware.apusys@2.1',
         'vendor.mediatek.hardware.apuware.hmp@1.0',
         'vendor.mediatek.hardware.apuware.utils@2.0'
+        'vendor.mediatek.hardware.videotelephony@1.0',
     ): lib_fixup_vendor_suffix,
 }
 
