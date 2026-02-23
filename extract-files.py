@@ -9,6 +9,11 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 
+from extract_utils.fixups_lib import (
+    lib_fixups,
+    lib_fixups_user_type,
+)
+
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -22,6 +27,21 @@ namespace_imports = [
     'hardware/motorola',
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    (
+        'libtflite_mtk',
+        'libneuron_graph_delegate.mtk',
+        'vendor.mediatek.hardware.apuware.apusys@2.0',
+        'vendor.mediatek.hardware.apuware.apusys@2.1',
+        'vendor.mediatek.hardware.apuware.hmp@1.0',
+        'vendor.mediatek.hardware.apuware.utils@2.0'
+    ): lib_fixup_vendor_suffix,
+}
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
         .regex_replace('1.1', '1.2')
@@ -30,7 +50,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
-    ('vendor/bin/mnld', 'vendor/lib64/mt6879/libcam.utils.sensorprovider.so'): blob_fixup()
+    'vendor/bin/mnld': blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so', 'vendor/lib/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
@@ -60,6 +80,7 @@ module = ExtractUtilsModule(
     'manaus',
     'motorola',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 
