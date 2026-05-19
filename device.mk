@@ -50,7 +50,9 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+    $(DEVICE_PATH) \
+    hardware/motorola \
+    hardware/mediatek
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/manaus/manaus-vendor.mk)
