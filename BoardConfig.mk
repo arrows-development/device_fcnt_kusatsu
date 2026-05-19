@@ -109,6 +109,12 @@ BOARD_USES_METADATA_PARTITION := true
 # Platform
 TARGET_BOARD_PLATFORM := mt6879
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# VINTF
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
