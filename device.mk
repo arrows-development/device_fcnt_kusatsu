@@ -69,6 +69,26 @@ PRODUCT_PACKAGES += \
     com.android.hardware.boot \
     android.hardware.boot-service.default_recovery
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.mt6879 \
+    init.connectivity.rc \
+    init.connectivity.common.rc \
+    init_conninfra.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.modem.rc \
+    init.recovery.mt6879.rc \
+    init.mt6879.rc \
+    init.mtkgki.rc \
+    init.oem.hw.sh \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6879.rc
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/init/fstab.mt6879:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6879
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek
