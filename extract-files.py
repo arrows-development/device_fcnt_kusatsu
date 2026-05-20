@@ -4,6 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.fixups_blob import (
+    blob_fixup,
+    blob_fixups_user_type,
+)
+
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -15,9 +20,17 @@ namespace_imports = [
     'hardware/motorola',
 ]
 
+blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
+        .regex_replace('1.1', '1.2')
+        .regex_replace('@1.0', '@1.2')
+        .regex_replace('default9', 'default'),
+}  # fmt: skip
+
 module = ExtractUtilsModule(
     'manaus',
     'motorola',
+    blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
 )
 
