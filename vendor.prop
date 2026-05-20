@@ -78,6 +78,15 @@ ro.vendor.pq.mtk_backlight_smooth_support=0
 ro.vendor.pq.mtk_ultra_dimming_support=0
 ro.vendor.pq.mtk_blulight_def_support=0
 
+# Sensors
+ro.vendor.fusion.algorithm.in.sensorhub=yes
+ro.vendor.hw.ecompass=true
+ro.vendor.hw.fps=true
+ro.vendor.mag.calibration.in.sensorhub=yes
+ro.vendor.mtk.sensor.support=yes
+ro.vendor.sensors.mot_ltv=true
+ro.vendor.sensors.prox_for_call=true
+
 # Surface Flinger
 debug.sf.enable_hwc_vds=0
 debug.sf.treat_170m_as_sRGB=1

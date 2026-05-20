@@ -816,3 +816,11 @@ vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libNoFpsActor.so
 vendor/lib64/libOpenCL.so
+
+# Sensors
+vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6879.so
+vendor/lib64/libhfmanager.so
+vendor/lib64/libhfmanagerwrapper.so
+vendor/lib64/libhwm.so
+vendor/lib64/libksensor.so
+vendor/lib64/sensors.moto.so
