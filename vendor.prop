@@ -90,6 +90,9 @@ vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=9
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
+# Keystore
+ro.hardware.kmsetkey=trustonic
+
 # Sensors
 ro.vendor.fusion.algorithm.in.sensorhub=yes
 ro.vendor.hw.ecompass=true
@@ -106,3 +109,8 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.set_idle_timer_ms=500
 ro.surface_flinger.set_touch_timer_ms=1000
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
+# TEE
+ro.mtk_key_manager_support=1
+ro.vendor.mtk_tee_gp_support=1
+ro.vendor.mtk_trustonic_tee_support=1
