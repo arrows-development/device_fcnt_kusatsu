@@ -93,6 +93,12 @@ vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=9
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
+# Neural Networks
+debug.mtk_tflite.target_nnapi=29
+ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
+ro.vendor.mtk_nn_baseline_support=1
+ro.vendor.mtk_nn_quant_preferred=1
+
 # Keystore
 ro.hardware.kmsetkey=trustonic
 
