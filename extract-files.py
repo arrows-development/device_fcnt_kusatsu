@@ -17,6 +17,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/motorola/manaus',
     'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
     'hardware/motorola',
 ]
 
