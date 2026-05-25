@@ -43,6 +43,10 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/mt6879/lib3a.sensors.flicker.so', 'vendor/lib64/mt6879/lib3a.sensors.color.so',
      'vendor/lib64/lib3a.ae.pipe.so'): blob_fixup()
         .add_needed('liblog.so'),
+    ('vendor/lib/mt6879/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/mt6879/libneuralnetworks_sl_driver_mtk_prebuilt.so', 
+     'vendor/lib64/libstfactory-vendor.so', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so',
+     'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib/libtflite_mtk.so', 'vendor/lib64/libtflite_mtk.so', 'vendor/lib64/sensors.moto.so'): blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
