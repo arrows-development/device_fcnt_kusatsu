@@ -367,6 +367,18 @@
       "Value": "9999999"
     },
     {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
       "PowerHint": "GAME_LOADING",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
