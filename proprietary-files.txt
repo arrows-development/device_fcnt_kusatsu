@@ -1061,6 +1061,10 @@ vendor/lib64/libmvpu_runtime_pub.so
 vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
 
+# Modules
+vendor/bin/init.insmod.sh
+vendor/etc/init.insmod.mt6879.cfg
+
 # MotCamera4
 product/app/MotCamera3AI/MotCamera3AI.apk
 product/etc/permissions/deviceowner-configuration-com.motorola.camera3.xml
