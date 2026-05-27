@@ -70,12 +70,13 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so', 'vendor/lib/libsysenv.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     ('vendor/lib64/hw/mt6879/android.hardware.camera.provider@2.6-impl-mediatek.so', 'vendor/lib64/mt6879/libmtkcam_stdutils.so'): blob_fixup()
-        .replace_needed('libutils.so', 'libutils-v32.so'),
+        .replace_needed('libutils.so', 'libutils-v32.so')
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v31.so'),
     'vendor/lib64/hw/mt6879/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v31.so'),
-        .replace_needed('libutils.so', 'libutils-v32.so'),
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v31.so')
+        .replace_needed('libutils.so', 'libutils-v32.so')
+        .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
     ('vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so', 'vendor/bin/hw/android.hardware.gnss-service.mediatek'): blob_fixup()
