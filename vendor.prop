@@ -22,6 +22,7 @@ bluetooth.profile.pan.nap.enabled=true
 bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
+ro.vendor.bt.platform=6879
 
 # Camera
 camera.disable_zsl_mode=1
