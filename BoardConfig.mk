@@ -132,6 +132,9 @@ VENDOR_SECURITY_PATCH := 2026-04-01
 
 # VINTF
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # SKU
 ODM_MANIFEST_SKUS += be de bn dn
