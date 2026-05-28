@@ -244,7 +244,7 @@ PRODUCT_PACKAGES += \
     FrameworkOverlayManaus \
     SettingsOverlayManaus \
     SystemUIOverlayManaus \
-    Launcher3DeviceOverlay \
+    NexusLauncherDeviceOverlay \
     TetheringOverlayManaus \
     WifiOverlayManaus \
     TelephonyOverlayManaus
@@ -254,7 +254,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     LineageApertureOverlayManaus \
-    LineageSettingsProviderOverlayManaus
+    CustomSettingsProviderOverlayManaus
 
 # Power-off Alarm
 PRODUCT_PACKAGES += \
