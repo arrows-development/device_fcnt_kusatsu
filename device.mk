@@ -361,6 +361,10 @@ $(call soong_config_set_bool,mediatek_vibrator,supports_effects,true)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
+# VNDK
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # WiFi
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 PRODUCT_PACKAGES += \
