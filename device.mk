@@ -265,7 +265,10 @@ PRODUCT_PACKAGES += \
     NexusLauncherDeviceOverlay \
     TetheringOverlayManaus \
     WifiOverlayManaus \
-    TelephonyOverlayManaus
+    TelephonyOverlayManaus \
+    RegulatoryOverlayXT2307-1 \
+    RegulatoryOverlayXT2307-2 \
+    RegulatoryOverlayXT2307-3
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
