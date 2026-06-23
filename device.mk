@@ -263,6 +263,7 @@ PRODUCT_PACKAGES += \
     SettingsOverlayManaus \
     SystemUIOverlayManaus \
     NexusLauncherDeviceOverlay \
+    NfcOverlayManaus \
     TetheringOverlayManaus \
     WifiOverlayManaus \
     TelephonyOverlayManaus \
