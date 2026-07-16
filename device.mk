@@ -213,6 +213,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.manaus
 
+# LunarisDolby
+PRODUCT_PACKAGES += \
+    LunarisDolby
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-com.motorola.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.omadm.service.xml
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
