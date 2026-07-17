@@ -995,7 +995,7 @@ vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
-vendor/lib64/libformatter.so
+vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so;FIX_SONAME
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libvcodec_oal.so;DISABLE_CHECKELF
@@ -1221,7 +1221,7 @@ vendor/lib64/libtrm.so
 vendor/lib64/libvia-ril.so
 vendor/lib64/libviamipc-ril.so
 vendor/lib64/libwpfa.so
-vendor/lib64/mt6855/libmnl.so;SYMLINK=vendor/lib64/libmnl.so
+vendor/lib64/mt6855/libmnl.so:vendor/lib64/mt6855/libmnl_mtk.so;SYMLINK=vendor/lib64/libmnl_mtk.so;FIX_SONAME
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 

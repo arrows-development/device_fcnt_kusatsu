@@ -71,6 +71,11 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
+    (
+        'vendor/lib64/libcodec2_mtk_vdec.so',
+        'vendor/lib64/libcodec2_mtk_venc.so',
+    ): blob_fixup()
+        .replace_needed('libformatter.so', 'libformatter_mtk.so'),
     ('vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so', 'vendor/bin/hw/android.hardware.gnss-service.mediatek'): blob_fixup()
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     ('vendor/lib64/hw/hwcomposer.mtk_common.so', 'vendor/lib64/mt6855/libcam.hal3a.v3.so'): blob_fixup()
@@ -89,7 +94,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
         .add_needed('android.hardware.security.rkp-V3-ndk.so')
         .add_needed('libbase_shim.so'),
-    'vendor/lib64/mt6855/libmnl.so': blob_fixup()
+    'vendor/bin/mnld': blob_fixup()
+        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
+    'vendor/lib64/mt6855/libmnl_mtk.so': blob_fixup()
         .add_needed('libcutils.so'),
     'vendor/etc/libnfc-nxp_220.conf': blob_fixup()
         .regex_replace('DEFAULT_ISODEP_ROUTE=0x01', 'DEFAULT_ISODEP_ROUTE=0xC0')
