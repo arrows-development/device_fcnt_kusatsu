@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.lights-service.manaus",
+    name: "android.hardware.lights-service.sbuya",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.lights.manaus.rc"],
-    vintf_fragments: ["android.hardware.lights.manaus.xml"],
+    init_rc: ["android.hardware.lights.sbuya.rc"],
+    vintf_fragments: ["android.hardware.lights.sbuya.xml"],
     vendor: true,
     shared_libs: [
         "libbase",

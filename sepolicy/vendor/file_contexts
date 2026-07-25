@@ -21,10 +21,12 @@
 /mnt/vendor/persist/egis(/.*)?                                                              u:object_r:vendor_persist_fingerprint_file:s0
 /mnt/vendor/persist/fps(/.*)?                                                               u:object_r:vendor_persist_fingerprint_file:s0
 /mnt/vendor/persist/goodix(/.*)?                                                            u:object_r:vendor_persist_fingerprint_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.fpc                      u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.goodix                   u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.motorola                 u:object_r:hal_fingerprint_default_exec:s0
 
 # Lights
-/vendor/bin/hw/android\.hardware\.lights-service\.manaus                              u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.lights-service\.sbuya                              u:object_r:hal_light_default_exec:s0
 
 # Mobicore TEE
 /mnt/vendor/trustlet(/.*)? u:object_r:mnt_vendor_trustlet_file:s0

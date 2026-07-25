@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/manaus
+DEVICE_PATH := device/fcnt/sbuya
 
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
@@ -83,25 +83,25 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.mt6879 \
+    fstab.mt6835 \
     init.connectivity.rc \
     init.connectivity.common.rc \
-    init_conninfra.rc \
+    init_connectivity.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.recovery.mt6879.rc \
-    init.mt6879.usb.rc \
-    init.mt6879.power.rc \
-    init.mt6879.rc \
+    init.recovery.mt6835.rc \
+    init.mt6835.usb.rc \
+    init.mt6835.power.rc \
+    init.mt6835.rc \
     init.mtkgki.rc \
     init.oem.hw.sh \
     init.oem.fingerprint2.sh \
     init.project.rc \
     init.sensor_2_0.rc \
-    ueventd.mt6879.rc
+    ueventd.mt6835.rc
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/init/fstab.mt6879:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6879
+    $(DEVICE_PATH)/init/fstab.mt6835:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6835
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -161,13 +161,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.motorola \
-    libudfpshandler
-
-PRODUCT_PACKAGES += \
-    vendor.egistec.hardware.fingerprint@4.0 \
-    com.motorola.hardware.biometric.fingerprint@1.1 \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1
+    com.motorola.hardware.biometric.fingerprint@1.0
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -194,8 +188,10 @@ PRODUCT_PACKAGES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/keylayout/goodix_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_ts.kl \
-    $(DEVICE_PATH)/configs/keylayout/fts_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fts_ts.kl
+    $(DEVICE_PATH)/configs/idc/uinput-exlider.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-exlider.idc \
+    $(DEVICE_PATH)/configs/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-goodix.idc \
+    $(DEVICE_PATH)/configs/keylayout/uinput-exlider.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-exlider.kl \
+    $(DEVICE_PATH)/configs/keylayout/uinput_nav.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput_nav.kl
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -211,7 +207,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.manaus
+    android.hardware.lights-service.sbuya
 
 # LunarisDolby
 PRODUCT_PACKAGES += \
@@ -225,7 +221,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # MotoActions
 PRODUCT_PACKAGES += \
-    MotoActionsManaus \
     MotoCommonOverlay
 
 # Media
@@ -245,8 +240,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp \
-    android.hardware.secure_element-service.nxp
+    android.hardware.nfc-service.st
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -259,7 +253,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml
 
-DEVICE_NFC_SKUS := be de bn dn
+DEVICE_NFC_SKUS := dn
 
 PRODUCT_COPY_FILES += \
     $(foreach DEVICE_NFC_SKU, $(DEVICE_NFC_SKUS), \
@@ -270,15 +264,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    EuiccOverlayManaus \
-    FrameworkOverlayManaus \
-    SettingsOverlayManaus \
-    SystemUIOverlayManaus \
+    EuiccOverlaySbuya \
+    FrameworkOverlaySbuya \
+    SettingsOverlaySbuya \
+    SystemUIOverlaySbuya \
     NexusLauncherDeviceOverlay \
-    NfcOverlayManaus \
-    TetheringOverlayManaus \
-    WifiOverlayManaus \
-    TelephonyOverlayManaus \
+    NfcOverlaySbuya \
+    TetheringOverlaySbuya \
+    WifiOverlaySbuya \
+    TelephonyOverlaySbuya \
     RegulatoryOverlayXT2307-1 \
     RegulatoryOverlayXT2307-2 \
     RegulatoryOverlayXT2307-3
@@ -287,8 +281,8 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayManaus \
-    CustomSettingsProviderOverlayManaus
+    LineageApertureOverlaySbuya \
+    CustomSettingsProviderOverlaySbuya
 
 # Power-off Alarm
 PRODUCT_PACKAGES += \
@@ -337,7 +331,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     android.hardware.sensors@2.0-subhal-impl-1.0 \
-    sensors.manaus
+    sensors.sbuya
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -352,7 +346,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.dynamic.head_tracker.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.dynamic.head_tracker.xml
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -361,7 +355,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/motorola \
     hardware/mediatek/libmtkperf_client \
-    hardware/mediatek/libaedv \
     hardware/mediatek
 
 # Thermal
@@ -406,4 +399,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/motorola/manaus/manaus-vendor.mk)
+$(call inherit-product, vendor/fcnt/sbuya/sbuya-vendor.mk)

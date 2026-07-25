@@ -4,6 +4,11 @@
 #
 # Copyright (c) 2019 Lenovo
 # All rights reserved.
+#
+# April 15, 2019  chengql2@lenovo.com  Initial version
+# December 2, 2019  chengql2  Store fps_id into persist fs
+# November 19, 2020 zengzm refactor the code, support more than 3 fingerprint sensors; support config.
+
 # get the filename, contains the file postfix
 script_name=${0##*/}
 # remove the file postfix
@@ -22,10 +27,10 @@ GKI_PATH=$(getprop $PROP_GKI_PATH)
 # hal_list: the array contains the hal service name.
 #
 # note: all arrays should have the same size.
-vendor_list=('goodix' 'egis')
-kernel_so_list=("/vendor/lib/modules/$GKI_PATH/goodix_mtk_fod.ko" "/vendor/lib/modules/$GKI_PATH/ets_fod_mmi.ko")
-kernel_so_name_list=("goodix_mtk_fod.ko" "ets_fod_mmi.ko")
-hal_list=('goodix_hal' 'ets_hal')
+vendor_list=('fpc' 'goodix')
+kernel_so_list=("/vendor/lib/modules/$GKI_PATH/fpc_mtk_tee.ko" "/vendor/lib/modules/$GKI_PATH/goodix_fps_tee.ko")
+kernel_so_name_list=("fpc_mtk_tee.ko" "goodix_fps_tee.ko")
+hal_list=('fps_hal' 'goodix_hal')
 last_vendor_index=`expr ${#vendor_list[@]} - 1`
 vendor_list_size=${#vendor_list[@]}
 
@@ -51,7 +56,7 @@ persist_fps_id=/mnt/vendor/persist/fps/vendor_id
 persist_fps_id2=/mnt/vendor/persist/fps/last_vendor_id
 
 FPS_VENDOR_NONE=none
-MAX_TIMES=100
+MAX_TIMES=30
 
 # this property store FPS_STATUS_NONE or FPS_STATUS_OK
 # after start fingerprint hal service, the hal service will set this property.
@@ -88,8 +93,8 @@ function start_hal_service(){
     sleep 1
     setprop $prop_fps_ident ${vendor_list[$1]}
 
-    log "start vendor.fingerprint-default"
-    start vendor.fingerprint-default
+    log "start ${hal_list[$1]}"
+    start ${hal_list[$1]}
 
     for ii in $(seq 1 $MAX_TIMES)
     do
@@ -103,13 +108,13 @@ function start_hal_service(){
 
     log "fingerprint HAL status: $fps_status"
     if [ $fps_status == $FPS_STATUS_OK ]; then
-        log "start vendor.fingerprint-default hal success"
+        log "start ${hal_list[$1]} hal success"
         setprop $prop_persist_fps ${vendor_list[$1]}
         return 0
     fi
 
-    log "start vendor.fingerprint-default hal failed, remove kernel so: ${kernel_so_name_list[$1]} "
-    stop vendor.fingerprint-default
+    log "start ${hal_list[$1]} hal failed, remove kernel so: ${kernel_so_name_list[$1]} "
+    setprop ctl.stop ${hal_list[$1]}
     rmmod ${kernel_so_name_list[$1]}
     sleep 0.1
     # if failed,return 255

@@ -1,0 +1,73 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "android.hardware.media.c2-mtk-service",
+    vendor: true,
+    relative_install_path: "hw",
+
+    init_rc: ["android.hardware.media.c2-mtk-service.rc"],
+    vintf_fragments: ["manifest_media_c2_mtk.xml"],
+
+    defaults: [
+        "libcodec2-hidl-defaults",
+        "libcodec2-aidl-defaults",
+    ],
+
+    required: [
+        "android.hardware.media.c2-mediatek-seccomp-policy",
+        "android.hardware.media.c2-extended-seccomp-policy",
+        "crash_dump.policy",
+    ],
+
+    srcs: [
+        "vendor.cpp",
+    ],
+
+    shared_libs: [
+        "libavservices_minijail",
+        "libbinder",
+        "libbinder_ndk",
+        "libcodec2_mtk_c2store",
+        "libcodec2_mtk_vdec",
+        "libcodec2_mtk_venc",
+    ] + select(soong_config_variable("android_hardware_mediatek_codec2", "link_v33_libstagefright_foundation"), {
+        true: ["libstagefright_foundation-v33"],
+        default: [],
+    }),
+}
+
+cc_library_shared {
+    name: "libcodec2_mtk_c2store",
+    soc_specific: true,
+}
+
+cc_library_shared {
+    name: "libcodec2_mtk_vdec",
+    soc_specific: true,
+}
+
+cc_library_shared {
+    name: "libcodec2_mtk_venc",
+    soc_specific: true,
+}
+
+prebuilt_etc {
+    name: "android.hardware.media.c2-mediatek-seccomp-policy",
+    vendor: true,
+    sub_dir: "seccomp_policy",
+    srcs: [
+	"seccomp_policy/android.hardware.media.c2-mediatek-seccomp-policy",
+    ],
+}
+
+prebuilt_etc {
+    name: "android.hardware.media.c2-extended-seccomp-policy",
+    vendor: true,
+    sub_dir: "seccomp_policy",
+    srcs: [
+        "seccomp_policy/android.hardware.media.c2-extended-seccomp-policy",
+    ],
+}
