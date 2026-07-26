@@ -1067,6 +1067,34 @@ vendor/lib64/libsysenv.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
+# Thermal
+vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
+vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
+vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
+vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
+vendor/lib64/hw/thermal_hal.so
+
+# Thermal configs
+vendor/etc/thermal/disable_skin_control.conf
+vendor/etc/thermal/disable_thermal.conf
+vendor/etc/thermal/disable_thermal_temp.conf
+vendor/etc/thermal/disable_throttling.conf
+vendor/etc/thermal/thermal.conf
+vendor/etc/thermal/thermal_kpoc.conf
+vendor/etc/thermal/thermal_mtbf.conf
+vendor/etc/thermal/thermal_policy_00.conf
+vendor/etc/thermal/thermal_policy_02.conf
+vendor/etc/thermal/thermal_policy_04.conf
+vendor/etc/thermal/thermal_policy_05.conf
+vendor/etc/thermal/thermal_policy_06.conf
+vendor/etc/thermal/thermal_policy_08.conf
+vendor/etc/thermal/thermal_policy_12.conf
+vendor/etc/thermal/thermal_policy_15.conf
+vendor/etc/thermal/thermal_policy_16.conf
+vendor/etc/thermal/thermal_policy_17.conf
+vendor/etc/thermal/thermal_policy_18.conf
+vendor/etc/thermal/thermal_policy_19.conf
+
 # Tinyxml
 system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-v31.so;FIX_SONAME
 
