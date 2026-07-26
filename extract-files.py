@@ -129,6 +129,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.security.keymint-V2-ndk.so', 'android.hardware.security.keymint-V4-ndk.so'),
     ('vendor/lib64/libmtk-ril.so', 'vendor/lib64/libmtkmipc-ril.so'): blob_fixup()
         .replace_needed('libtflite.so', 'libtflite-v33.so'),
+    'vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0': blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
