@@ -1065,6 +1065,7 @@ system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-v31.so;FIX_SONAME
 
 # Touch firmware
 vendor/firmware/hdl_firmware.img
+vendor/firmware/hdl_firmware.img:recovery/root/vendor/firmware/hdl_firmware.img
 
 # Power
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
