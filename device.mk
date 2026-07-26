@@ -44,7 +44,6 @@ PRODUCT_PACKAGES += \
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
-TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
@@ -209,10 +208,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.sbuya
 
-# LunarisDolby
-PRODUCT_PACKAGES += \
-    LunarisDolby
-
+# Omadm
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/permissions/privapp-permissions-com.motorola.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.omadm.service.xml
 
