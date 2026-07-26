@@ -873,10 +873,6 @@ vendor/lib64/libmvpu_runtime_pub.so
 vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
 
-# Modules
-vendor/bin/init.insmod.sh
-vendor/etc/init.insmod.mt6835.cfg
-
 # MotCamera5
 product/etc/MotoDesktopAppConfig/com.motorola.camera5.desktop-config.xml
 product/etc/permissions/deviceowner-configuration-com.motorola.camera5.xml

@@ -86,6 +86,8 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.connectivity.common.rc \
     init_connectivity.rc \
+    init.insmod.sh \
+    init.insmod.mt6855.cfg \
     init.mmi.overlay.rc \
     init.mmi.rc \
     init.recovery.mt6835.rc \
