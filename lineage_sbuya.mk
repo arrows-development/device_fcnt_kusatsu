@@ -14,6 +14,10 @@ $(call inherit-product, device/fcnt/sbuya/device.mk)
 # Inherit some common lineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# WitAqua stuff
+PROCESSOR_INFO := MediaTek Dimensity 6300
+WITAQUA_MAINTAINER := kailua
+
 TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_NAME := lineage_sbuya
