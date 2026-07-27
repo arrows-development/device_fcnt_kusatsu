@@ -131,6 +131,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtflite.so', 'libtflite-v33.so'),
     'vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0': blob_fixup()
         .add_needed('libbase_shim.so'),
+    'vendor/etc/init/hw/init.vendor.st21nfc.rc': blob_fixup()
+        .regex_replace('libnfc-nci-st-felica.conf', 'libnfc-hal-st-felica.conf'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
