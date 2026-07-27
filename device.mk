@@ -159,6 +159,9 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
     fastbootd
 
+# FCNTParts
+-include packages/apps/FCNTParts/device.mk
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     com.motorola.hardware.biometric.fingerprint@1.0
