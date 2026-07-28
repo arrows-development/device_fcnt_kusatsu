@@ -282,6 +282,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     LineageApertureOverlaySbuya \
+    LineageSdkOverlaySbuya \
     CustomSettingsProviderOverlaySbuya
 
 # Power-off Alarm
