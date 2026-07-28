@@ -273,9 +273,9 @@ PRODUCT_PACKAGES += \
     TetheringOverlaySbuya \
     WifiOverlaySbuya \
     TelephonyOverlaySbuya \
-    RegulatoryOverlayXT2307-1 \
-    RegulatoryOverlayXT2307-2 \
-    RegulatoryOverlayXT2307-3
+    RegulatoryOverlayRA07507-101X \
+    RegulatoryOverlayRA07507-102X \
+    RegulatoryOverlayRA07507-105X
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
