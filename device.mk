@@ -285,6 +285,9 @@ PRODUCT_PACKAGES += \
     LineageSdkOverlaySbuya \
     CustomSettingsProviderOverlaySbuya
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/component-overrides-regulatory-info.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/component-overrides-regulatory-info.xml
+
 # Power-off Alarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
