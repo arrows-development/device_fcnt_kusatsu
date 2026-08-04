@@ -1287,6 +1287,9 @@ vendor/etc/init/android.hardware.usb.gadget-service.mediatek.rc
 vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatek.xml
 vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.mediatek.xml
 
+# Vibrator
+vendor/firmware/aw862xx_haptic.bin
+
 # WiFi
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
