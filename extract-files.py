@@ -43,8 +43,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.kusatsu.rc': blob_fixup()
-        .regex_replace('(hw/android.hardware.biometrics.fingerprint@2.1-service)(?!\\.)', '\\1.kusatsu'),
     'system_ext/priv-app/MtkGbaService/MtkGbaService.apk': blob_fixup()
         .apktool_patch('patches/GbaService'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
@@ -72,6 +70,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v31.so')
         .replace_needed('libutils.so', 'libutils-v32.so')
         .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
+    'vendor/lib64/hw/fingerprint.fpc.default.so': blob_fixup()
+        .binary_regex_replace(rb'fingerprint\.fpc\x00', b'fingerprint\x00\x00\x00\x00\x00'),
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
     (
