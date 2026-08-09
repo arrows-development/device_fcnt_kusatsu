@@ -226,13 +226,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# MM
-PRODUCT_PACKAGES += \
-    init.zram.rc
-
-PRODUCT_COPY_FILES += \
-    hardware/google/pixel/mm/fstab.zram.40p:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.zram
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.st

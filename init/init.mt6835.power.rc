@@ -82,7 +82,15 @@ on init
     # system tasks
     write /dev/cpuctl/system/cpu.shares 20480
 
+    # ZRAM Setup
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+
 on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.mt6835
+    write /proc/sys/vm/swappiness 60
+
     # PowerHAL Hint Processing
     setprop vendor.powerhal.init 1
 

@@ -120,13 +120,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.zram.rc",
-    src: "init.zram.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "ueventd.mt6835.rc",
     filename: "ueventd.rc",
     src: "ueventd.mt6835.rc",
