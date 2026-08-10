@@ -28,6 +28,9 @@
 # Lights
 /vendor/bin/hw/android\.hardware\.lights-service\.sbuya                              u:object_r:hal_light_default_exec:s0
 
+# Media
+/vendor/bin/hw/android\.hardware\.media\.c2-mtk-service                              u:object_r:mtk_hal_c2_exec:s0
+
 # Mobicore TEE
 /mnt/vendor/trustlet(/.*)? u:object_r:mnt_vendor_trustlet_file:s0
 /mnt/vendor/tzapp(/.*)? u:object_r:mnt_vendor_trustlet_file:s0
@@ -44,6 +47,10 @@
 
 # Touch HAL
 /vendor/bin/hw/vendor\.lineage\.touch-service\.motorola    u:object_r:hal_lineage_touch_default_exec:s0
+
+# USB
+/vendor/bin/hw/android\.hardware\.usb-aidl-service\.mediatekv1\.0                      u:object_r:mtk_hal_usb_exec:s0
+/vendor/bin/hw/android\.hardware\.usb\.gadget-service\.mediatekv1\.1                   u:object_r:mtk_hal_usb_exec:s0
 
 # Vendor init scripts
 /vendor/bin/hardware_revisions\.sh                                                     u:object_r:vendor_moto_init_shell_exec:s0
