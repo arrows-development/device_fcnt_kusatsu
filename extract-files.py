@@ -131,6 +131,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/etc/init/hw/init.vendor.st21nfc.rc': blob_fixup()
         .regex_replace('libnfc-nci-st-felica.conf', 'libnfc-hal-st-felica.conf'),
+    'system_ext/lib64/libsource.so': blob_fixup()
+        .add_needed('libui_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
