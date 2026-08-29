@@ -23,8 +23,8 @@ sh_binary {
 }
 
 prebuilt_etc {
-    name: "fstab.mt6835",
-    src: "fstab.mt6835",
+    name: "fstab.mt6855",
+    src: "fstab.mt6855",
     vendor: true,
 }
 
@@ -50,22 +50,22 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6835.usb.rc",
-    src: "init.mt6835.usb.rc",
+    name: "init.mt6855.usb.rc",
+    src: "init.mt6855.usb.rc",
     relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.mt6835.power.rc",
-    src: "init.mt6835.power.rc",
+    name: "init.mt6855.power.rc",
+    src: "init.mt6855.power.rc",
     relative_install_path: "init/hw",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.recovery.mt6835.rc",
-    src: "init.recovery.mt6835.rc",
+    name: "init.recovery.mt6855.rc",
+    src: "init.recovery.mt6855.rc",
     relative_install_path: "init",
     recovery: true,
 }
@@ -92,8 +92,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6835.rc",
-    src: "init.mt6835.rc",
+    name: "init.mt6855.rc",
+    src: "init.mt6855.rc",
     relative_install_path: "init/hw",
     vendor: true,
 }
@@ -120,8 +120,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.mt6835.rc",
+    name: "ueventd.mt6855.rc",
     filename: "ueventd.rc",
-    src: "ueventd.mt6835.rc",
+    src: "ueventd.mt6855.rc",
     vendor: true,
 }

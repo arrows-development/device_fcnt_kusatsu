@@ -1,7 +1,7 @@
-# Android Device tree for the arrows We3
+# Android Device tree for the arrows We2
 
 ## Device picture
-![arrows We3](https://network.mobile.rakuten.co.jp/assets/img/product/arrows-we3/pht-device-00.png "arrows We3")
+![arrows We2](https://www.fcnt.com/product/arrows/we2/images/we2_min_gray.webp "arrows We2")
 
 ```
 #

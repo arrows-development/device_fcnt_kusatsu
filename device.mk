@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/fcnt/sbuya
+DEVICE_PATH := device/fcnt/kusatsu
 
 # Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.mt6835 \
+    fstab.mt6855 \
     init.connectivity.rc \
     init.connectivity.common.rc \
     init_connectivity.rc \
@@ -90,19 +90,19 @@ PRODUCT_PACKAGES += \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
     init.mmi.rc \
-    init.recovery.mt6835.rc \
-    init.mt6835.usb.rc \
-    init.mt6835.power.rc \
-    init.mt6835.rc \
+    init.recovery.mt6855.rc \
+    init.mt6855.usb.rc \
+    init.mt6855.power.rc \
+    init.mt6855.rc \
     init.mtkgki.rc \
     init.oem.hw.sh \
     init.oem.fingerprint2.sh \
     init.project.rc \
     init.sensor_2_0.rc \
-    ueventd.mt6835.rc
+    ueventd.mt6855.rc
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/init/fstab.mt6835:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6835
+    $(DEVICE_PATH)/init/fstab.mt6855:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6855
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -205,7 +205,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.sbuya
+    android.hardware.lights-service.kusatsu
 
 # Omadm
 PRODUCT_COPY_FILES += \
@@ -252,15 +252,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
-    EuiccOverlaySbuya \
-    FrameworkOverlaySbuya \
-    SettingsOverlaySbuya \
-    SystemUIOverlaySbuya \
+    EuiccOverlayKusatsu \
+    FrameworkOverlayKusatsu \
+    SettingsOverlayKusatsu \
+    SystemUIOverlayKusatsu \
     NexusLauncherDeviceOverlay \
-    NfcOverlaySbuya \
-    TetheringOverlaySbuya \
-    WifiOverlaySbuya \
-    TelephonyOverlaySbuya \
+    NfcOverlayKusatsu \
+    TetheringOverlayKusatsu \
+    WifiOverlayKusatsu \
+    TelephonyOverlayKusatsu \
     RegulatoryOverlayRA07507-101X \
     RegulatoryOverlayRA07507-102X \
     RegulatoryOverlayRA07507-105X
@@ -269,9 +269,9 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlaySbuya \
-    LineageSdkOverlaySbuya \
-    CustomSettingsProviderOverlaySbuya
+    LineageApertureOverlayKusatsu \
+    LineageSdkOverlayKusatsu \
+    CustomSettingsProviderOverlayKusatsu
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/component-overrides-regulatory-info.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/component-overrides-regulatory-info.xml
@@ -324,7 +324,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     android.hardware.sensors@2.0-subhal-impl-1.0 \
-    sensors.sbuya
+    sensors.kusatsu
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -383,4 +383,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/fcnt/sbuya/sbuya-vendor.mk)
+$(call inherit-product, vendor/fcnt/kusatsu/kusatsu-vendor.mk)
