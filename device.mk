@@ -341,7 +341,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/google/interfaces \
     hardware/mediatek/libmtkperf_client \
-    hardware/mediatek
+    hardware/mediatek \
+    hardware/google/pixel/power-libperfmgr
 
 # USB
 $(call soong_config_set_bool,mediatek_gadget,use_custom_usb_gadget_rc,true)
