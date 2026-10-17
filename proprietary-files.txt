@@ -1612,7 +1612,7 @@ vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 # Radio (MTK-IMS)
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
-system_ext/framework/mediatek-ims-base.jar
+system_ext/framework/mediatek-ims-base.jar:system/framework/mediatek-ims-base.jar;BOOT_JAR
 system_ext/lib64/libcomutils.so
 system_ext/lib64/libimsma.so
 system_ext/lib64/libimsma_adapt.so
