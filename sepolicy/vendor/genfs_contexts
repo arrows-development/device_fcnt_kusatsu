@@ -59,7 +59,6 @@ genfscon sysfs /devices/platform/soc/11db2000.i2c/i2c-7/7-005a/leds/vibrator/dur
 genfscon sysfs /devices/platform/soc/11db2000.i2c/i2c-7/7-005a/leds/vibrator/seq        u:object_r:sysfs_vibrator:s0
 
 # Wakeup (https://lkml.org/lkml/2019/8/6/1275)
-genfscon sysfs /devices/platform/10001000.consys/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11cb0000.i2c/i2c-2/2-0020/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11cb1000.i2c/i2c-4/4-0020/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/11e00000.i2c/i2c-0/0-0055/wakeup u:object_r:sysfs_wakeup:s0
@@ -84,7 +83,6 @@ genfscon sysfs /devices/platform/smart_battery/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11011000.spi1/spi_master/spi1/spi1.1/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.1/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11201000.usb0/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1e000000.adspsys/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1f000000.mmlsys_config/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11ed0000.i2c/i2c-0/0-0065/power_supply/cp-standalone/wakeup16 u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-hvdiv-chg/wakeup28 u:object_r:sysfs_wakeup:s0
