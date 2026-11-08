@@ -1669,6 +1669,14 @@ vendor/etc/init/v3avpud.rc
 vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
 
+# Touchscreen (firmware)
+vendor/firmware/Yamato_LCE_MDT_JD0113.bin
+vendor/firmware/Yamato_LCE_MDT_JD0303.bin
+vendor/firmware/Yamato_LD_MDT_GC0203_MP.bin
+vendor/firmware/Yamato_LD_MDT_GC0213.bin
+vendor/firmware/Yamato_LD_MDT_GC04A4.bin
+vendor/firmware/gcore_mp_test.ini
+
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin
