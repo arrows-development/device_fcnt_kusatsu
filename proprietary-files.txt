@@ -1685,6 +1685,12 @@ vendor/firmware/Yamato_LD_MDT_GC0203_MP.bin
 vendor/firmware/Yamato_LD_MDT_GC0213.bin
 vendor/firmware/Yamato_LD_MDT_GC04A4.bin
 vendor/firmware/gcore_mp_test.ini
+vendor/firmware/Yamato_LCE_MDT_JD0113.bin:recovery/root/vendor/firmware/Yamato_LCE_MDT_JD0113.bin
+vendor/firmware/Yamato_LCE_MDT_JD0303.bin:recovery/root/vendor/firmware/Yamato_LCE_MDT_JD0303.bin
+vendor/firmware/Yamato_LD_MDT_GC0203_MP.bin:recovery/root/vendor/firmware/Yamato_LD_MDT_GC0203_MP.bin
+vendor/firmware/Yamato_LD_MDT_GC0213.bin:recovery/root/vendor/firmware/Yamato_LD_MDT_GC0213.bin
+vendor/firmware/Yamato_LD_MDT_GC04A4.bin:recovery/root/vendor/firmware/Yamato_LD_MDT_GC04A4.bin
+vendor/firmware/gcore_mp_test.ini:recovery/root/vendor/firmware/gcore_mp_test.ini
 
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
