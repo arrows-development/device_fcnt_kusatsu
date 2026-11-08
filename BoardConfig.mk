@@ -147,10 +147,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
-# SKU
-ODM_MANIFEST_SKUS += dn
-ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/sku/manifest_dn.xml
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_ALGORITHM := SHA256_RSA2048
