@@ -10,18 +10,6 @@ sh_binary {
     vendor: true,
 }
 
-sh_binary {
-    name: "init.oem.hw.sh",
-    src: "init.oem.hw.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.oem.fingerprint2.sh",
-    src: "init.oem.fingerprint2.sh",
-    vendor: true,
-}
-
 prebuilt_etc {
     name: "fstab.mt6855",
     src: "fstab.mt6855",
@@ -75,27 +63,6 @@ prebuilt_etc {
     src: "init.recovery.mt6855.rc",
     relative_install_path: "init",
     recovery: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.chipset.rc",
-    src: "init.mmi.chipset.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.overlay.rc",
-    src: "init.mmi.overlay.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.mmi.rc",
-    src: "init.mmi.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
 }
 
 prebuilt_etc {

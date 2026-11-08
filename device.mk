@@ -92,16 +92,11 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     init.insmod.sh \
     init.kusatsu.sku.rc \
-    init.mmi.chipset.rc \
-    init.mmi.overlay.rc \
-    init.mmi.rc \
     init.recovery.mt6855.rc \
     init.mt6855.usb.rc \
     init.mt6855.power.rc \
     init.mt6855.rc \
     init.mtkgki.rc \
-    init.oem.hw.sh \
-    init.oem.fingerprint2.sh \
     init.project.rc \
     init.sensor_2_0.rc \
     ueventd.mt6855.rc
