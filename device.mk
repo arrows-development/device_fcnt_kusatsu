@@ -161,6 +161,12 @@ PRODUCT_PACKAGES += \
 # FCNTParts
 -include packages/apps/FCNTParts/device.mk
 
+# Felica
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/felica/kddi/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
+    $(LOCAL_PATH)/configs/felica/kddi/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
+    $(LOCAL_PATH)/configs/felica/kddi/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg
+
 # Fingerprint
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
