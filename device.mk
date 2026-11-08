@@ -162,9 +162,6 @@ PRODUCT_PACKAGES += \
 -include packages/apps/FCNTParts/device.mk
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    com.motorola.hardware.biometric.fingerprint@1.0
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
@@ -211,16 +208,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.kusatsu
 
-# Omadm
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/permissions/privapp-permissions-com.motorola.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.omadm.service.xml
-
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# MotoActions
-PRODUCT_PACKAGES += \
-    MotoCommonOverlay
 
 # Media
 $(call soong_config_set_bool,android_hardware_mediatek_codec2,link_v33_libstagefright_foundation,true)
@@ -351,15 +340,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/google/pixel \
     hardware/google/interfaces \
-    hardware/motorola \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.motorola
-
-$(call soong_config_set, MOTOROLA_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/class/touchscreen/primary/interpolation)
 
 # USB
 $(call soong_config_set_bool,mediatek_gadget,use_custom_usb_gadget_rc,true)
