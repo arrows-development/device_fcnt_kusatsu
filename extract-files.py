@@ -71,6 +71,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
     (
+        'vendor/lib/libcodec2_mtk_vdec.so',
+        'vendor/lib/libcodec2_mtk_venc.so',
         'vendor/lib64/libcodec2_mtk_vdec.so',
         'vendor/lib64/libcodec2_mtk_venc.so',
     ): blob_fixup()
@@ -83,9 +85,9 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/mt6855/lib3a.sensors.flicker.so', 'vendor/lib64/mt6855/lib3a.sensors.color.so',
      'vendor/lib64/lib3a.ae.pipe.so'): blob_fixup()
         .add_needed('liblog.so'),
-    ('vendor/lib64/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so', 
-     'vendor/lib64/libstfactory-vendor.so', 'vendor/lib64/libnvram.so',
-     'vendor/lib64/libsysenv.so', 'vendor/lib64/libtflite_mtk.so', 'vendor/lib64/sensors.moto.so'): blob_fixup()
+    ('vendor/lib/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so', 'vendor/lib64/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so', 
+     'vendor/lib64/libstfactory-vendor.so', 'vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so',
+     'vendor/lib/libsysenv.so', 'vendor/lib64/libsysenv.so', 'vendor/lib/libtflite_mtk.so', 'vendor/lib64/libtflite_mtk.so', 'vendor/lib64/sensors.moto.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/bin/hw/android.hardware.security.keymint-service.trustonic': blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so', 'android.hardware.security.keymint-V1-ndk.so')
