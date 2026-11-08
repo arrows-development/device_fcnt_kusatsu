@@ -86,3 +86,4 @@ getgroups: 1
 unlinkat: 1
 sched_setscheduler: 1
 mkdirat: 1
+flock: 1
