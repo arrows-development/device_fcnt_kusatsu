@@ -24,7 +24,6 @@ namespace_imports = [
     'device/fcnt/kusatsu',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
-    'hardware/motorola',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
