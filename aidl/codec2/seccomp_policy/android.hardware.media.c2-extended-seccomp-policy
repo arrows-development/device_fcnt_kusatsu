@@ -42,3 +42,7 @@ fstatfs: 1
 unlinkat: 1
 sched_setscheduler: 1
 mkdirat: 1
+flock: 1
+uname: 1
+sysinfo: 1
+getppid: 1
