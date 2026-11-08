@@ -1470,6 +1470,7 @@ vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
+
 # NFC
 vendor/etc/init/init.fcnthal.nfc.rc
 vendor/etc/init/init.fcnthal.se.rc
