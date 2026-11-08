@@ -179,6 +179,8 @@ vendor/lib64/libbt-vendor.so
 # Bluetooth (Firmware)
 vendor/etc/init/init.bt_drv.rc
 vendor/firmware/BT_FW.cfg
+vendor/firmware/soc2_2_ram_bt_1b_1_hdr.bin
+vendor/firmware/soc2_2_ram_bt_1c_1_hdr.bin
 
 # Camera
 vendor/bin/hw/mt6855/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
@@ -1739,5 +1741,11 @@ vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 vendor/lib64/libwifitest.so
 
 # WIFI (firmware)
+vendor/firmware/WIFI_RAM_CODE_soc2_2_1b_1.bin
+vendor/firmware/WIFI_RAM_CODE_soc2_2_1c_1.bin
 vendor/firmware/WMT_SOC.cfg
+vendor/firmware/soc2_2_ram_mcu_1b_1_hdr.bin
+vendor/firmware/soc2_2_ram_mcu_1c_1_hdr.bin
+vendor/firmware/soc2_2_ram_wifi_1b_1_hdr.bin
+vendor/firmware/soc2_2_ram_wifi_1c_1_hdr.bin
 vendor/firmware/wifi.cfg
