@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "RegulatoryOverlayFCG02",
+    vendor: true,
+}

@@ -266,7 +266,8 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayKusatsu \
     RegulatoryOverlayRA07507-101X \
     RegulatoryOverlayRA07507-102X \
-    RegulatoryOverlayRA07507-105X
+    RegulatoryOverlayRA07507-105X \
+    RegulatoryOverlayFCG02
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
