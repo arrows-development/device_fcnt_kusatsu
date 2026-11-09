@@ -10,3 +10,6 @@ set_prop(vendor_init, vendor_mot_prop)
 # Sku prop
 set_prop(vendor_init, vendor_nfc_prop)
 set_prop(vendor_init, vendor_sku_prop)
+
+# Fingerprint
+allow vendor_init sysfs_fingerprint:file setattr;

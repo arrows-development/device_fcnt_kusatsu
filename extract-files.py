@@ -43,6 +43,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.kusatsu.rc': blob_fixup()
+        .regex_replace('(hw/android.hardware.biometrics.fingerprint@2.1-service)(?!\\.)', '\\1.kusatsu'),
     'system_ext/priv-app/MtkGbaService/MtkGbaService.apk': blob_fixup()
         .apktool_patch('patches/GbaService'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()

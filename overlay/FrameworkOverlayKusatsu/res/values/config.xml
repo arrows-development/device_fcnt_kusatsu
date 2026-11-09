@@ -416,6 +416,14 @@
          on the headphone/microphone jack. When false use the older uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
 
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+         and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false" >
+        <item>0:2:15</item>
+    </string-array>
+
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps">true</bool>
 
@@ -428,8 +436,8 @@
 
     <array name="config_sfps_sensor_props_0" translatable="false">
         <item>local:4627039422300187648</item> <!--item>displayId</item-->
-        <item>800</item> <!--item>sensorLocationX</item-->
-        <item>900</item> <!--item>sensorLocationY</item-->
-        <item>120</item> <!--item>sensorRadius</item-->
+        <item>1080</item> <!--item>sensorLocationX</item-->
+        <item>750</item> <!--item>sensorLocationY</item-->
+        <item>200</item> <!--item>sensorRadius</item-->
     </array>
 </resources>

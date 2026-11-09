@@ -14,6 +14,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.media\.c2@1\.0-service                      u:object_r:mediacodec_exec:s0
 
 # Fingerprint
+/data/vendor/fpc(/.*)?                                                                      u:object_r:fps_data_file:s0
 /data/vendor/.fps(/.*)?                                                                     u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/egis(/.*)?                                                                     u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/gf_data(/.*)?                                                                  u:object_r:fingerprint_vendor_data_file:s0
@@ -21,6 +22,7 @@
 /mnt/vendor/persist/egis(/.*)?                                                              u:object_r:vendor_persist_fingerprint_file:s0
 /mnt/vendor/persist/fps(/.*)?                                                               u:object_r:vendor_persist_fingerprint_file:s0
 /mnt/vendor/persist/goodix(/.*)?                                                            u:object_r:vendor_persist_fingerprint_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.kusatsu          u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.fpc                      u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.goodix                   u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.motorola                 u:object_r:hal_fingerprint_default_exec:s0
