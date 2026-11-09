@@ -195,10 +195,7 @@ PRODUCT_PACKAGES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/idc/uinput-exlider.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-exlider.idc \
-    $(DEVICE_PATH)/configs/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-goodix.idc \
-    $(DEVICE_PATH)/configs/keylayout/uinput-exlider.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-exlider.kl \
-    $(DEVICE_PATH)/configs/keylayout/uinput_nav.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput_nav.kl
+    $(DEVICE_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc
 
 # Keymint
 PRODUCT_PACKAGES += \
