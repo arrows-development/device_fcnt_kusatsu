@@ -19,6 +19,7 @@ rw_dir_file(hal_fingerprint_default, dri_device)
 # fingerprint status prop
 set_prop(hal_fingerprint_default, vendor_mot_prop)
 hwbinder_use(hal_fingerprint_default)
+vndbinder_use(hal_fingerprint_default)
 get_prop(hal_fingerprint_default, boot_status_prop)
 allow hal_fingerprint_default mnt_vendor_file:dir search;
 hal_client_domain(hal_fingerprint_default, hal_power)
@@ -29,3 +30,4 @@ allow hal_fingerprint_default fingerprint_device:chr_file { open read write ioct
 allow hal_fingerprint_default persist_data_file:dir search;
 allow hal_fingerprint_default sysfs_fingerprint:file rw_file_perms;
 add_service(hal_fingerprint_default, hal_fingerprint_test_service)
+add_hwservice(hal_fingerprint_default, hal_fingerprint_ext_hwservice)
