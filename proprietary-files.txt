@@ -1115,6 +1115,7 @@ vendor/lib64/libwvhidl.so
 
 # Euicc
 product/etc/sysconfig/euicc.xml
+product/overlay/EuiccOverlayApp.apk:product/app/EuiccOverlayApp.apk;PRESIGNED
 system/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 
 # Felica
