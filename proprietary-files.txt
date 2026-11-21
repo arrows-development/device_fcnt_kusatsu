@@ -1133,6 +1133,14 @@ vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:vendor/et
 vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml:vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.kusatsu.xml
 vendor/lib64/hw/fingerprint.fpc.default.so
 
+# FM
+vendor/etc/init/init.fmradio_drv.rc
+vendor/firmware/fm_cust.cfg
+vendor/firmware/mt6631_fm_v1_coeff.bin
+vendor/firmware/mt6631_fm_v1_patch.bin
+vendor/firmware/mt6635_fm_v1_coeff.bin
+vendor/firmware/mt6635_fm_v1_patch.bin
+
 # Fuelgauge
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram

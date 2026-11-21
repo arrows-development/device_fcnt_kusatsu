@@ -128,6 +128,10 @@ ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
 
+# FM
+persist.vendor.connsys.fm_chipid=mt6631_6635
+ro.vendor.fm.platform=mt6631_6635
+
 # FRP
 ro.frp.pst=/dev/block/by-name/frp
 
