@@ -2,6 +2,15 @@
 ro.adb.secure.recovery=0
 
 # IMS
+persist.vendor.mtk_rcs_single_reg_support=0
+persist.vendor.mtk_uce_support=0
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+# Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
+# Radio
+persist.radio.is_vonr_enabled_0=true
+persist.radio.is_vonr_enabled_1=true
