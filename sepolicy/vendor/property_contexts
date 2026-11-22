@@ -32,3 +32,4 @@ vendor.qti.nfc.chipid u:object_r:vendor_nfc_prop:s0
 # SKU
 ro.boot.product.hardware.sku u:object_r:vendor_sku_prop:s0
 ro.vendor.product.hardware.sku.variant u:object_r:vendor_sku_prop:s0
+vendor.camera.sensor. u:object_r:vendor_mtk_camera_prop:s0

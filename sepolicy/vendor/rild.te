@@ -5,3 +5,4 @@ get_prop(rild, vendor_mot_prop)
 allow rild vendor_proc_hw:file r_file_perms;
 
 set_prop(rild, vendor_mtk_radio_prop)
+r_dir_file(rild, persist_data_file)
