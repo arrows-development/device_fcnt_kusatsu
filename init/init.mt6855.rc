@@ -824,6 +824,10 @@ on boot
     chmod 0770 /sys/power/tuxonice
     chmod 0220 /sys/power/tuxonice/do_hibernate
 
+    # Double tap to wake
+    chown system system /sys/devices/virtual/gcore/gcore/gesture_en
+    chmod 0660 /sys/devices/virtual/gcore/gcore/gesture_en
+
 
 # Smartbook Handler Framework
     chown system system /sys/power/sb_state
