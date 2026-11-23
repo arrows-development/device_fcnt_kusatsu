@@ -1,5 +1,5 @@
 on early-init
-    write /proc/sys/kernel/sched_pelt_multiplier 1
+    write /proc/sys/kernel/sched_pelt_multiplier 2
 
 on init
     # Setup final cpuset
@@ -25,7 +25,7 @@ on init
 ## Utilization Clamping
     # Tuning
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
-    write /proc/sys/kernel/sched_util_clamp_min 128
+    write /proc/sys/kernel/sched_util_clamp_min 1024
 
     # Real-Time tasks
     write /dev/cpuctl/rt/cpu.uclamp.latency_sensitive 1
