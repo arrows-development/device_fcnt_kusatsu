@@ -1151,6 +1151,7 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
 
 # Graphics
+vendor/bin/hw/android.hardware.graphics.composer@3.4-service
 vendor/bin/hw/mt6855/android.hardware.graphics.allocator-V2-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek,vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek.mt6855
 vendor/etc/init/android.hardware.graphics.allocator.aidl-service.img.rc
 vendor/etc/vintf/manifest/manifest_gralloc.xml
