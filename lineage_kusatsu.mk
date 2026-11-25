@@ -30,5 +30,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceName=FCG02 \
-    BuildDesc="FCG02_jp_kdi-user 15 V35RK52B FCG02.20251029 release-keys" \
-    BuildFingerprint=FCNT/FCG02_jp_kdi/FCG02:15/V35RK52B/FCG02.20251029:user/release-keys
+    BuildDesc="FCG02_jp_kdi-user 16 V55RK53C FCG02.20261002 release-keys" \
+    BuildFingerprint=FCNT/FCG02_jp_kdi/FCG02:16/V55RK53C/FCG02.20261002:user/release-keys
