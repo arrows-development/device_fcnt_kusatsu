@@ -74,6 +74,12 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 mem.enable_mglru=1 loglevel=4 initcall_debug=0
 
+# The LK of V55RK53C passes androidboot.* through bootconfig
+BOARD_BOOTCONFIG := \
+    kernel.rcu_nocbs=all \
+    kernel.rcutree.enable_rcu_lazy=1 \
+    kernel.rcupdate.rcu_cpu_stall_cputime=1
+
 TARGET_FORCE_PREBUILT_KERNEL := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel/dtb
